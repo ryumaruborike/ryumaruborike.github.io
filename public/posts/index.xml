@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on THE SITE tm</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on THE SITE tm</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 03 Feb 2025 12:14:54 +0300</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>From Host to Container</title>
+      <link>http://localhost:1313/posts/from-host-to-container/</link>
+      <pubDate>Mon, 03 Feb 2025 12:14:54 +0300</pubDate>
+      <guid>http://localhost:1313/posts/from-host-to-container/</guid>
+      <description>&lt;h2 id=&#34;its-never-too-late-to-learn-something-right&#34;&gt;It&amp;rsquo;s never too late to learn something, right?..&lt;/h2&gt;&#xA;&lt;p&gt;So basically, you can run programs from your host machine in a Docker container by executing them in the container’s namespace (&lt;a href=&#34;https://securitylabs.datadoghq.com/articles/container-security-fundamentals-part-2/&#34;&gt;more about linux namespaces and containers here&lt;/a&gt;).&#xA;The first thing to do is to find out the container’s PID.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;pid&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;docker inspect -f &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;{{ .State.Pid }}&amp;#39;&lt;/span&gt; container_name&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Then you can use &lt;code&gt;nsenter&lt;/code&gt; to execute commands in the required namespace by using the PID (in this example, I&amp;rsquo;m executing &lt;code&gt;ip addr&lt;/code&gt; in the network namespace).&amp;quot;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Getting started</title>
+      <link>http://localhost:1313/posts/my-first-post/</link>
+      <pubDate>Mon, 20 Jan 2025 15:38:26 +0300</pubDate>
+      <guid>http://localhost:1313/posts/my-first-post/</guid>
+      <description>&lt;h2 id=&#34;why&#34;&gt;Why&lt;/h2&gt;&#xA;&lt;p&gt;I&amp;rsquo;m &amp;hellip; and this is the first post on this site, the whole purpose of which is to force me to do something and track this something. It can be tech stuff, it can be gaming, music, etc. Pretty much anything. Now excuse me, I need to go and make it at least not as disgusting as it is now.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
